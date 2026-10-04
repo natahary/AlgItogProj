@@ -20,9 +20,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
-/**
- * Точка входа приложения ShieldBank.
- */
 public final class Main {
 
     private static final Scanner SCANNER = new Scanner(System.in);
@@ -30,15 +27,15 @@ public final class Main {
     private Main() {
     }
 
-    /**
-     * @param args аргументы командной строки
-     */
     public static void main(String[] args) {
         boolean running = true;
+        
         while (running) {
             printMenu();
             int choice = readInt("Выбор: ");
+            
             try {
+                
                 switch (choice) {
                     case 1:
                         demoActionStack();
@@ -89,9 +86,11 @@ public final class Main {
     }
 
     private static int readInt(String prompt) {
+        
         while (true) {
             System.out.print(prompt);
             String line = SCANNER.nextLine().trim();
+            
             try {
                 return Integer.parseInt(line);
             } catch (NumberFormatException exception) {
@@ -110,6 +109,7 @@ public final class Main {
         System.out.println("Откат: " + stack.pop());
         System.out.println("Откат: " + stack.pop());
         System.out.println("Откат: " + stack.pop());
+        
         try {
             stack.pop();
         } catch (IllegalStateException exception) {

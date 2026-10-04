@@ -14,12 +14,15 @@ public final class ChangeMaker {
         Arrays.sort(sorted);
         List<Integer> result = new ArrayList<>();
         int rest = amount;
+        
         for (int i = sorted.length - 1; i >= 0 && rest > 0; i--) {
+            
             while (rest >= sorted[i]) {
                 result.add(sorted[i]);
                 rest -= sorted[i];
             }
         }
+        
         if (rest != 0) {
             return null;
         }
@@ -31,8 +34,11 @@ public final class ChangeMaker {
         int[] previous = new int[amount + 1];
         Arrays.fill(best, Integer.MAX_VALUE);
         best[0] = 0;
+        
         for (int i = 1; i <= amount; i++) {
+            
             for (int coin : coins) {
+                
                 if (i >= coin && best[i - coin] != Integer.MAX_VALUE
                         && best[i - coin] + 1 < best[i]) {
                     best[i] = best[i - coin] + 1;
@@ -40,11 +46,13 @@ public final class ChangeMaker {
                 }
             }
         }
+        
         if (best[amount] == Integer.MAX_VALUE) {
             return null;
         }
         List<Integer> result = new ArrayList<>();
         int current = amount;
+        
         while (current > 0) {
             result.add(previous[current]);
             current -= previous[current];

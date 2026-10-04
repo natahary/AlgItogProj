@@ -25,6 +25,7 @@ public class ActionStack {
     }
 
     public Operation pop() {
+        
         if (top == null) {
             throw new IllegalStateException("Журнал пуст, откатывать нечего");
         }
@@ -35,6 +36,7 @@ public class ActionStack {
     }
 
     public Operation peek() {
+        
         if (top == null) {
             throw new IllegalStateException("Журнал пуст");
         }

@@ -4,21 +4,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Выдача суммы купюрами: жадный и точный режимы.
- */
 public final class ChangeMaker {
 
     private ChangeMaker() {
     }
 
-    /**
-     * Жадный алгоритм.
-     *
-     * @param coins номиналы
-     * @param amount сумма
-     * @return список купюр или null, если выдать нельзя
-     */
     public static List<Integer> greedy(int[] coins, int amount) {
         int[] sorted = coins.clone();
         Arrays.sort(sorted);
@@ -36,13 +26,6 @@ public final class ChangeMaker {
         return result;
     }
 
-    /**
-     * Точный алгоритм через динамическое программирование.
-     *
-     * @param coins номиналы
-     * @param amount сумма
-     * @return список купюр или null, если выдать нельзя
-     */
     public static List<Integer> dp(int[] coins, int amount) {
         int[] best = new int[amount + 1];
         int[] previous = new int[amount + 1];

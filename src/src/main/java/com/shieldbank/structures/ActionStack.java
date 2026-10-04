@@ -2,9 +2,6 @@ package com.shieldbank.structures;
 
 import com.shieldbank.model.Operation;
 
-/**
- * Собственный стек журнала операций с откатом в порядке LIFO.
- */
 public class ActionStack {
 
     private static final class Node {
@@ -20,11 +17,6 @@ public class ActionStack {
     private Node top;
     private int size;
 
-    /**
-     * Кладёт операцию в журнал.
-     *
-     * @param operation операция
-     */
     public void push(Operation operation) {
         Node node = new Node(operation);
         node.next = top;
@@ -32,12 +24,6 @@ public class ActionStack {
         size++;
     }
 
-    /**
-     * Достаёт последнюю операцию.
-     *
-     * @return последняя операция
-     * @throws IllegalStateException если журнал пуст
-     */
     public Operation pop() {
         if (top == null) {
             throw new IllegalStateException("Журнал пуст, откатывать нечего");
@@ -48,12 +34,6 @@ public class ActionStack {
         return operation;
     }
 
-    /**
-     * Возвращает верхушку без снятия.
-     *
-     * @return последняя операция
-     * @throws IllegalStateException если журнал пуст
-     */
     public Operation peek() {
         if (top == null) {
             throw new IllegalStateException("Журнал пуст");

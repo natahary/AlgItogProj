@@ -1,13 +1,7 @@
 package com.shieldbank.model;
 
-/**
- * Операция по счёту: перевод, блокировка, разблокировка.
- */
 public class Operation {
 
-    /**
-     * Тип операции.
-     */
     public enum Type {
         TRANSFER,
         BLOCK,
@@ -20,13 +14,6 @@ public class Operation {
     private final long amount;
     private final long timestamp;
 
-    /**
-     * @param type тип операции
-     * @param fromAccount счёт-источник
-     * @param toAccount счёт-назначение, -1 если нет
-     * @param amount сумма в копейках
-     * @param timestamp время операции в миллисекундах
-     */
     public Operation(Type type, long fromAccount, long toAccount,
                      long amount, long timestamp) {
         this.type = type;

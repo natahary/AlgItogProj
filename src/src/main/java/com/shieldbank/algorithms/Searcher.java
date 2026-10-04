@@ -12,13 +12,16 @@ public final class Searcher {
     public static int lowerBound(List<Operation> sorted, long key) {
         int low = 0;
         int high = sorted.size();
+        
         while (low < high) {
             int mid = (low + high) >>> 1;
+            
             if (sorted.get(mid).getTimestamp() < key) {
                 low = mid + 1;
             } else {
                 high = mid;
             }
+            
         }
         return low;
     }

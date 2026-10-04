@@ -1,3 +1,4 @@
+<img width="432" height="183" alt="Снимок экрана 2026-10-04 в 15 51 06" src="https://github.com/user-attachments/assets/84d5c74e-2a72-4b79-99fd-15d0a863335b" />
 # AlgItogProj
 # AlgItogProj — ShieldBank
 

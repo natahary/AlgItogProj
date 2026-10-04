@@ -13,9 +13,7 @@ import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Set;
 
-/**
- * Алгоритмы на графе переводов: BFS, DFS, компоненты, Дейкстра.
- */
+
 public final class GraphAlgorithms {
 
     private static final int COLOR_WHITE = 0;
@@ -25,13 +23,6 @@ public final class GraphAlgorithms {
     private GraphAlgorithms() {
     }
 
-    /**
-     * Обход в ширину.
-     *
-     * @param graph граф
-     * @param start начальная вершина
-     * @return порядок посещения вершин
-     */
     public static List<Long> bfs(Graph graph, long start) {
         List<Long> order = new ArrayList<>();
         Set<Long> visited = new HashSet<>();
@@ -50,12 +41,6 @@ public final class GraphAlgorithms {
         return order;
     }
 
-    /**
-     * Проверяет наличие цикла в ориентированном графе.
-     *
-     * @param graph граф
-     * @return true, если есть цикл
-     */
     public static boolean hasCycle(Graph graph) {
         Map<Long, Integer> color = new HashMap<>();
         for (long vertex : graph.vertices()) {
@@ -87,12 +72,7 @@ public final class GraphAlgorithms {
         return false;
     }
 
-    /**
-     * Считает число компонент слабой связности.
-     *
-     * @param graph граф
-     * @return число компонент
-     */
+
     public static int countComponents(Graph graph) {
         Map<Long, Set<Long>> undirected = new HashMap<>();
         for (long vertex : graph.vertices()) {
@@ -125,13 +105,6 @@ public final class GraphAlgorithms {
         return count;
     }
 
-    /**
-     * Дейкстра: минимальная сумма комиссий от start до всех вершин.
-     *
-     * @param graph граф
-     * @param start начальная вершина
-     * @return карта вершина и минимальная комиссия
-     */
     public static Map<Long, Integer> dijkstra(Graph graph, long start) {
         Map<Long, Integer> distance = new HashMap<>();
         for (long vertex : graph.vertices()) {

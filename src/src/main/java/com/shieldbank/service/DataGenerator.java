@@ -6,9 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-/**
- * Генератор тестовых данных с фиксированным seed для замеров.
- */
 public final class DataGenerator {
 
     private static final long DEFAULT_SEED = 42L;
@@ -18,12 +15,6 @@ public final class DataGenerator {
     private DataGenerator() {
     }
 
-    /**
-     * Генерирует список операций.
-     *
-     * @param count число операций
-     * @return список операций
-     */
     public static List<Operation> generateOperations(int count) {
         Random random = new Random(DEFAULT_SEED);
         List<Operation> operations = new ArrayList<>(count);
@@ -39,12 +30,6 @@ public final class DataGenerator {
         return operations;
     }
 
-    /**
-     * Генерирует массив случайных значений.
-     *
-     * @param count число значений
-     * @return массив значений
-     */
     public static long[] generateValues(int count) {
         Random random = new Random(DEFAULT_SEED);
         long[] values = new long[count];

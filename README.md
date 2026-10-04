@@ -1,4 +1,9 @@
 <img width="432" height="183" alt="Снимок экрана 2026-10-04 в 15 51 06" src="https://github.com/user-attachments/assets/84d5c74e-2a72-4b79-99fd-15d0a863335b" />
+<img width="474" height="225" alt="Снимок экрана 2026-10-04 в 15 51 17" src="https://github.com/user-attachments/assets/b6d85577-5712-43e0-b4ec-6935ecfadaf0" />
+<img width="453" height="392" alt="Снимок экрана 2026-10-04 в 16 07 08" src="https://github.com/user-attachments/assets/e2d12a21-f46b-4a9a-be71-9dcf36ec05bc" />
+<img width="420" height="203" alt="Снимок экрана 2026-10-04 в 15 51 26" src="https://github.com/user-attachments/assets/42dda4c3-6189-4f1d-978e-858883f08c40" />
+
+
 # AlgItogProj
 # AlgItogProj — ShieldBank
 

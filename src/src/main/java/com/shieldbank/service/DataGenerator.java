@@ -18,6 +18,7 @@ public final class DataGenerator {
     public static List<Operation> generateOperations(int count) {
         Random random = new Random(DEFAULT_SEED);
         List<Operation> operations = new ArrayList<>(count);
+        
         for (int i = 0; i < count; i++) {
             operations.add(new Operation(
                     Operation.Type.TRANSFER,
@@ -33,6 +34,7 @@ public final class DataGenerator {
     public static long[] generateValues(int count) {
         Random random = new Random(DEFAULT_SEED);
         long[] values = new long[count];
+        
         for (int i = 0; i < count; i++) {
             values[i] = random.nextInt(AMOUNT_RANGE);
         }

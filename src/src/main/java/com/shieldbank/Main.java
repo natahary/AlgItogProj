@@ -129,6 +129,7 @@ public final class Main {
         System.out.println("Поиск 999: " + tree.find(999));
         System.out.println("Счета по возрастанию номера:");
         List<Account> accounts = tree.inOrder();
+        
         for (Account account : accounts) {
             System.out.println("  " + account);
         }
@@ -179,6 +180,7 @@ public final class Main {
         System.out.println("Компонент: " + GraphAlgorithms.countComponents(graph));
         Map<Long, Integer> distance = GraphAlgorithms.dijkstra(graph, 1);
         System.out.println("Кратчайшие комиссии от 1:");
+        
         for (Map.Entry<Long, Integer> entry : distance.entrySet()) {
             System.out.println("  до " + entry.getKey()
                     + " = " + entry.getValue());
@@ -210,6 +212,7 @@ public final class Main {
         Arrays.sort(sorted);
         long target = sorted[10] + sorted[900];
         long[] pair = WindowAnalytics.findPair(sorted, target);
+        
         if (pair == null) {
             System.out.println("Пара не найдена");
         } else {
